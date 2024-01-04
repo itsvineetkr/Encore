@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 
 *{
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body, html {
@@ -28,16 +31,16 @@ body, html {
   
 .parallax2 {
     background-image: url("res/background/bg2.jpg");
-    min-height: 20%;
+    min-height: 90%;
 }
  
 .parallax3 {
     background-image: url("res/background/bg3.jpg");
-    min-height: 20%;
+    min-height: 30%;
 }
 
 .parallax4 {
-    background-image: url("res/background/bg4.png");
+    background-image: url("res/background/bg4.jpg");
     min-height: 20%;
 }
 
@@ -66,6 +69,7 @@ body, html {
     border-radius: 10px; 
     background-color: rgba(24, 26, 27, 0.509);
     color: rgb(255, 255, 255);
+    font-size: 0.9em;
 }
 
 .navigation a:hover, 
@@ -88,8 +92,8 @@ body, html {
     height: 60vh;
     font-family: 'Ephesis', cursive;
     font-size: 7rem;
-    color: rgb(0, 0, 0);
-    text-shadow: 2px, 2px, 4px, rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.636);
 }
 
 .homepagebuttons{
@@ -115,7 +119,7 @@ body, html {
     padding-left: 0.9rem;
     padding-right: 0.9rem;
     border-radius: 10px; 
-    font-size: 1.2em;
+    font-size: 1.7em;
     border: 20px;
     border-color: black;
     background-color: rgba(24, 26, 27, 0.509);
@@ -123,10 +127,20 @@ body, html {
 }
 
 .count{
-    background-color: rgb(45, 45, 45);
+    background-color: rgb(0, 0, 0);
 }
 .countImg{
     width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;     
+}
+
+.ribbon{
+    background-color: rgb(0, 0, 0);
+}
+.ribbonImg{
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: center;     
@@ -144,16 +158,17 @@ body, html {
     align-items: center;
     height: 20vh;
     font-family: 'Ephesis', cursive;
-    font-size: 3rem;
+    font-size: 4rem;
+    padding-top: 1em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.667);
 }
 
 .aboutText{
     padding: 3rem;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
-    color: rgb(35, 35, 35);
-    background-color: #D0F288;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
 }
 
 .eventImg{
@@ -165,20 +180,20 @@ body, html {
 }
 
 .events{
-    background-color: #8ADAB2;
+    background-color: #f18f45;
     padding-bottom: 4em;
 }
 
-.flashback{
-    background-color: rgb(42, 42, 42);
+.parallax4 h2{
+    padding-top: 1em;
+    font-size: 6em;
 }
 
 .flashImg{
-    max-height: 100vh;
-    max-width: 40%;
-    padding: 5rem;   
-    background-image: url(res/flashback/bg.png);
-    background-size: 100%;
+    max-width: 100%;
+    padding-bottom: 5rem;
+    padding-right: 3rem;   
+    padding-left: 3rem;
 }
 
 footer{
@@ -192,7 +207,7 @@ footer{
     justify-content: center;
 }
 .footer-content{
-    width: 33.3%;
+    width: 50%;
 }
 footer h3{
     font-size: 28px;
@@ -207,30 +222,7 @@ footer h3{
 .footer-content ul{
     text-align: center;
 }
-.list{
-    padding: 0;
-}
-.list li{
-    width: auto;
-    text-align: center;
-    list-style-type:none;
-    padding: 7px;
-    position: relative;
-}
-.list li::before{
-    content: '';
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 100%;
-    width: 0;
-    height: 2px;
-    background: #f18930;
-    transition-duration: .5s;
-}
-.list li:hover::before{
-    width: 70px;
-}
+
 .social-icons{
     text-align: center;
     padding: 0;
