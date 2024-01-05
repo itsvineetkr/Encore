@@ -1,46 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <style>
-        header{
-            background: #000000;
-            padding-top: 0;
-        }
-        .container{
-            width: 100%;
+        * {
             margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container {
             display: flex;
-            text-align: center;
-        }
-        .header-content{
-            width: 50%;
-            padding: 2em;
-        }
-        footer h3{
-            font-size: 28px;
-            margin-bottom: 15px;
-            text-align: center;
+            margin: auto;
             justify-content: center;
         }
-        .headertext{
-            color: white;
-            font-family: 'Ephesis', cursive;
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            margin: 1vh auto;
+            width: 50%;
+        }
+
+        .left {
+            justify-content: left;
+            padding-left: 10vw;
+        }
+
+        .right {
+            justify-content: right;
+            padding-right: 10vw;
+        }
+
+        .logo {
+            max-width: 150px;
+        }
+
+        fieldset {
+            padding: 4vw;
+            margin: 3vw;
+        }
+        .inputcontainer{
+            display: flex;
+            margin: auto;
+            width: 70vw;
+        }
+        label{
+            display: inline-block;
+            margin: 6px;
+            padding: 2px;
+            width: 30vw;
+            box-sizing: border-box;
+        }
+        .input{
+            display: inline-block;
+            margin: 5px;
+            padding: 2px;
+        }
+        .inputtextbox{
+            border: 0px;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 0.125em 0.3125em rgba(black, 0.3);
+            display: flex;
+            justify-content: center;
+            color: black;
+            box-sizing: border-box;
+            padding: 8px;
+            margin: 0;
+        }
+        .dropdown{
+            margin:10px;
+        }
+        .regButton{
+            padding: 10px;
+            background-color: white;
+            color: black;
+            border:0px;
+            border-radius: 12px;
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
-            <div class="header-content">
-                <h2 class="headertext">Encore</h2>
+            <div class="header-content left">
+                <img src="logo.png" class="logo">
             </div>
-            <div class="header-content">
-                <h2 class="headertext">Register</h2>
+            <div class="header-content right">
+                <h2>Register</h2>
             </div>
         </div>
     </header>
+
+    <form action="">
+        <fieldset>
+            <legend>Register yourself for Encore'24!!</legend>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="username">Name</label>
+                </div>
+                <div class="input textbox username">
+                    <input type="text" name="username" placeholder="Enter your name" class="inputtextbox">
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="college">College</label>
+                </div>
+                <div class="input textbox college">
+                    <input type="text" name="college" placeholder="Enter your college name" class="inputtextbox">
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="year">Year</label>
+                </div>
+                <div class="input dropdown year">
+                    <select name="year">
+                        <option value="1">1st</option>
+                        <option value="2">2nd</option>
+                        <option value="3">3rd</option>
+                        <option value="4">4th</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="age">Age</label>
+                </div>
+                <div class="input textbox age">
+                    <input type="text" name="age" class="inputtextbox" placeholder="Enter age">
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="refcode">Referal Code</label>
+                </div>
+                <div class="input text referal">
+                    <input type="text" name="refcode" class="inputtextbox" placeholder="Referal code if any">
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="contact">Contact</label>
+                </div>
+                <div class="input text contact">
+                    <input type="text" name="contact" class="inputtextbox" placeholder="Contact no.">
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="userid">User id</label>
+                </div>
+                <div class="input text userid">
+                    <input type="text" name="userid" placeholder="Create a user id" class="inputtextbox">
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="password">Password</label>
+                </div>
+                <div class="input password password">
+                    <input type="password" name="password" class="inputtextbox">
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="password">Confirm Password</label>
+                </div>
+                <div class="input password password">
+                    <input type="password" name="password" class="inputtextbox">
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="register">
+                    <button type="submit" class="regButton">Register</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
 </body>
+
 </html>
