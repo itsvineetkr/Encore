@@ -1,50 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CA Portal</title>
     <style>
-        *{
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Charm&family=Leckerli+One&family=Open+Sans:wght@300&family=Satisfy&display=swap');
+        /*
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Ephesis', cursive;
+        font-family: 'Charm', cursive;
+        font-family: 'Leckerli One', cursive;
+        font-family: 'Satisfy', cursive;
+        font-family: 'Bad Script', cursive;
+        */
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: black;
-            color: white;
+            color: rgb(0, 0, 0);
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+
         }
-        .container{
+
+        .container {
             display: flex;
             margin: auto;
             justify-content: center;
+            background-color: rgba(0, 0, 0, 0.133);
         }
-        .header-content{
+
+        .header-content {
             display: flex;
             align-items: center;
-            margin: 1vh auto;
+            margin: 5px auto;
             width: 50%;
         }
-        .left{
+
+        .left {
             justify-content: left;
             padding-left: 10vw;
         }
-        .right{
+
+        .right {
             justify-content: right;
             padding-right: 10vw;
         }
-        .logo{
+
+        .right h2 {
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 6px black;
+            font-family: 'Satisfy', cursive;
+        }
+
+        .logo {
             max-width: 150px;
+        }
+
+        form {
+            padding: 5vw;
+            margin: 0;
+        }
+
+        .inputcontainer {
+            display: flex;
+            margin: auto;
+            width: 100%;
+            justify-content: center;
+        }
+
+        label {
+            display: inline-block;
+            margin: 6px;
+            padding: 2px;
+            width: 20vw;
+            box-sizing: border-box;
+            text-shadow: 2px 2px 6px black;
+            color: white;
+        }
+
+        .input {
+            display: inline-block;
+            margin: 5px;
+            padding: 2px;
+        }
+
+        .inputtextbox {
+            border: 0px;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 0.125em 0.3125em rgba(black, 0.3);
+            display: flex;
+            justify-content: center;
+            color: black;
+            box-sizing: border-box;
+            padding: 8px;
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        .regButton {
+            padding: 10px;
+            background-color: white;
+            color: black;
+            border: 0px;
+            border-radius: 12px;
+        }
+
+        .register {
+            width: 60vw+8px;
+            display: flex;
+            justify-content: center;
+            margin: 5vh;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .background {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            background-image: url(res/bg.jpg);
+            min-height: 100vh;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content left">
-                <img src="logo.png" class="logo">
+    <div class="background">
+        <header>
+            <div class="container">
+                <div class="header-content left">
+                    <img src="res/logo.png" class="logo">
+                </div>
+                <div class="header-content right">
+                    <h2>Campus Ambassador Portal</h2>
+                </div>
             </div>
-            <div class="header-content right">
-                <h2>Campus Ambassador Portal</h2>
+        </header>
+
+        <form action="">
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="username">Name</label>
+                </div>
+                <div class="input textbox username">
+                    <input type="text" name="username" placeholder="Enter your name" class="inputtextbox">
+                </div>
             </div>
-        </div>
-    </header>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="refcode">Referal</label>
+                </div>
+                <div class="input text referal">
+                    <input type="text" name="refcode" class="inputtextbox" placeholder="Referal code if any">
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="password">Password</label>
+                </div>
+                <div class="input password password">
+                    <input type="password" name="password" class="inputtextbox">
+                </div>
+            </div>
+            <div class="register">
+                <button type="submit" class="regButton">Login</button>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>

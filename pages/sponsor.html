@@ -1,50 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sponsor</title>
+    <title>Sponsors</title>
     <style>
-        *{
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Charm&family=Leckerli+One&family=Open+Sans:wght@300&family=Satisfy&display=swap');
+        /*
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Ephesis', cursive;
+        font-family: 'Charm', cursive;
+        font-family: 'Leckerli One', cursive;
+        font-family: 'Satisfy', cursive;
+        font-family: 'Bad Script', cursive;
+        */
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: black;
-            color: white;
+            color: rgb(0, 0, 0);
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+
         }
-        .container{
+
+        .container {
             display: flex;
             margin: auto;
             justify-content: center;
+            background-color: rgba(0, 0, 0, 0.133);
         }
-        .header-content{
+
+        .header-content {
             display: flex;
             align-items: center;
-            margin: 1vh auto;
+            margin: 5px auto;
             width: 50%;
         }
-        .left{
+
+        .left {
             justify-content: left;
             padding-left: 10vw;
         }
-        .right{
+
+        .right {
             justify-content: right;
             padding-right: 10vw;
         }
-        .logo{
+
+        .right h2 {
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 6px black;
+            font-family: 'Satisfy', cursive;
+        }
+
+        .logo {
             max-width: 150px;
         }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .background {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            background-image: url(res/bg.jpg);
+            min-height: 100vh;
+        }
+
+
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content left">
-                <img src="logo.png" class="logo">
+    <div class="background">
+        <header>
+            <div class="container">
+                <div class="header-content left">
+                    <img src="res/logo.png" class="logo">
+                </div>
+                <div class="header-content right">
+                    <h2>Register</h2>
+                </div>
             </div>
-            <div class="header-content right">
-                <h2>Sponsors</h2>
-            </div>
-        </div>
-    </header>
+        </header>
+
+
+    </div>
 </body>
+
 </html>
