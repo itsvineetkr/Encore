@@ -58,17 +58,18 @@ font-family: 'Satisfy', cursive;
     display: flex;
     align-items: center;
     margin: 5px auto;
-    width: 50%;
 }
 
 .left {
     justify-content: left;
     padding-left: 10vw;
+    width: 30%;
 }
 
 .right {
     justify-content: right;
     padding-right: 10vw;
+    width: 70%;
 }
 
 .right ul a {
