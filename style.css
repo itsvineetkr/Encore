@@ -9,7 +9,7 @@ font-family: 'Leckerli One', cursive;
 font-family: 'Satisfy', cursive;
 */
 
-body{
+body {
     overflow-x: hidden;
 }
 
@@ -32,9 +32,11 @@ body{
 }
 
 .parallax2 {
-    background-image: url("res/background/bg2.png");
+    background-image: url("res/background/bg2.jpg");
     min-height: 50vh;
+    padding-bottom: 20px;
 }
+
 .parallax3 {
     background-image: url("res/background/bg3.jpg");
     min-height: 50vh;
@@ -83,8 +85,9 @@ body{
     text-decoration: none;
     padding: 1vw;
 }
-.right ul a:hover{
-    color:#ffee00;
+
+.right ul a:hover {
+    color: #ffee00;
     transition-duration: 0.2s;
 }
 
@@ -134,8 +137,8 @@ body{
     margin: 1vw;
 }
 
-.homepagebuttons:hover{
-    color:#ffee00;
+.homepagebuttons:hover {
+    color: #ffee00;
     transition-duration: 0.2s;
 }
 
@@ -146,15 +149,15 @@ body{
 
 .countImg {
     width: 80vw;
-    min-height: 8vh;
+    min-height: 6vh;
     margin: auto;
     display: flex;
     justify-content: center;
 }
 
 .ribbonImg {
-    width: 90vw;
-    min-height: 4vh;
+    width: 96vw;
+    min-height: 3vh;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -173,71 +176,79 @@ body{
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.667);
 }
 
-.eventtitle{
+.eventtitle {
     font-size: 70px;
 }
 
 .aboutText {
-    padding: 0 7vh;
-    padding-bottom: 7vh;
-    margin: 0;
+    margin: 0 10px;
+    padding: 20px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 4px black;
     text-justify: newspaper;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.411);
 }
 
 
-.eventImg{
+.eventImg {
     max-width: 30vmax;
-    padding: 1vw;
+    padding: 3vw;
 }
 
-.parallax3{
+.parallax3 {
     padding-bottom: 4em;
 }
 
-.enrollbutton{
+.enrollbutton {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 2vh;
 }
 
-.enrollbutton a{
-    background-color: rgba(0, 0, 0, 0.251);
+.enrollbutton a {
+    background-color: rgba(0, 0, 0, 0.493);
     text-decoration: none;
     font-family: 'Satisfy', cursive;
     font-size: 20px;
     padding: 10px;
     color: white;
     border-radius: 10px;
-    
 }
 
-.flashback{
+.enrollbutton a:hover {
+    color: #ffee00;
+    transition-duration: 0.2s;
+}
+
+.flashback {
     overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.parallax4 h2{
+
+.parallax4 h2 {
     font-size: 70px;
 }
 
-.flashImg{
-    max-width: 65vmax;
+.flashImg {
+    max-width: 120%;
+    max-height: 120vh;
     padding-bottom: 5rem;
-    padding-right: 3rem;   
+    padding-right: 3rem;
     padding-left: 3rem;
 }
 
-footer{
+footer {
     background: #343434;
     padding-top: 50px;
 }
-.footercontainer{
+
+.footercontainer {
     color: white;
     font-family: 'Open Sans', sans-serif;
     width: 100%;
@@ -245,60 +256,71 @@ footer{
     display: flex;
     justify-content: center;
 }
-.footer-content{
+
+.footer-content {
     width: 50%;
 }
-footer h3{
+
+footer h3 {
     font-size: 28px;
     margin-bottom: 15px;
     text-align: center;
 }
-.footer-content p{
+
+.footer-content p {
     font-size: 0.8rem;
-    width:190px;
+    width: 190px;
     margin: auto;
     padding: 7px;
     padding-left: 20px;
 }
-.footer-content ul{
+
+.footer-content ul {
     text-align: center;
 }
 
-.social-icons{
+.social-icons {
     text-align: center;
     padding: 0;
 }
-.social-icons li{
+
+.social-icons li {
     display: inline-block;
     text-align: center;
     padding: 5px;
 }
-.social-icons i{
+
+.social-icons i {
     color: white;
     font-size: 25px;
 }
-footer a{
+
+footer a {
     text-decoration: none;
 }
-footer a:hover{
+
+footer a:hover {
     color: #f18930;
 }
-.social-icons i:hover{
+
+.social-icons i:hover {
     color: #f18930;
 }
-.bottom-bar{
+
+.bottom-bar {
     background: #f18930;
     text-align: center;
     padding: 10px 0;
     margin-top: 50px;
 }
-.bottom-bar p{
+
+.bottom-bar p {
     color: #343434;
     margin: 0;
     font-size: 16px;
     padding: 7px;
 }
- 
-footer a{
+
+footer a {
     color: white;
 }
