@@ -111,6 +111,17 @@
             color: black;
         }
 
+        .dob {
+            margin: 10px;
+            width: 206px;
+        }
+
+        .isAmbassadorCheckbox {
+            margin: 10px;
+            width: 206px;
+            color: black;
+        }
+
         .regButton {
             padding: 10px;
             background-color: white;
@@ -148,6 +159,80 @@
             margin: 15px;
             margin-bottom: 0;
         }
+
+        .compulsory {
+            display: inline;
+            margin-top: 0;
+            padding-top: 0;
+            font-size: 0.8rem;
+            color: rgb(255, 99, 99);
+        }
+
+        /*Check Box*/
+        .checkboxContainer {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            width: auto;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .checkboxContainer input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+
+        .checkboxContainer:hover input~.checkmark {
+            background-color: #ccc;
+        }
+
+        .checkboxContainer input:checked~.checkmark {
+            background-color: #2196F3;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .checkboxContainer input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .checkboxContainer .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        #secretkey {
+            visibility: hidden;
+        }
+        
     </style>
 </head>
 
@@ -167,26 +252,26 @@
         <form action="">
             <div class="inputcontainer">
                 <div class="label">
-                    <label for="username">Name</label>
+                    <label for="username">Name<p class="compulsory">*</p></label>
                 </div>
                 <div class="input textbox username">
-                    <input type="text" name="username" placeholder="Enter your name" class="inputtextbox">
+                    <input type="text" name="username" placeholder="Enter your name" class="inputtextbox" id="username" required>
                 </div>
             </div>
             <div class="inputcontainer">
                 <div class="label">
-                    <label for="college">College</label>
+                    <label for="college">College<p class="compulsory">*</p></label>
                 </div>
                 <div class="input textbox college">
-                    <input type="text" name="college" placeholder="Enter your college name" class="inputtextbox">
+                    <input type="text" name="college" placeholder="Enter your college name" class="inputtextbox" id="college" required>
                 </div>
             </div>
             <div class="inputcontainer">
                 <div class="label">
-                    <label for="year">Year</label>
+                    <label for="year">Year<p class="compulsory">*</p></label>
                 </div>
                 <div class="input dropdown year">
-                    <select name="year">
+                    <select name="year" id="selectYear">
                         <option value="1">1st</option>
                         <option value="2">2nd</option>
                         <option value="3">3rd</option>
@@ -196,10 +281,10 @@
             </div>
             <div class="inputcontainer">
                 <div class="label">
-                    <label for="age">Age</label>
+                    <label for="age">Date of Birth<p class="compulsory">*</p></label>
                 </div>
-                <div class="input textbox age">
-                    <input type="text" name="age" class="inputtextbox" placeholder="Enter age">
+                <div class="input textbox dob">
+                    <input type="date" name="selected_date" id="dob" required>
                 </div>
             </div>
             <div class="inputcontainer">
@@ -207,45 +292,71 @@
                     <label for="refcode">Referal</label>
                 </div>
                 <div class="input text referal">
-                    <input type="text" name="refcode" class="inputtextbox" placeholder="Referal code if any">
+                    <input type="text" name="refcode" class="inputtextbox" placeholder="Referal code if any" id="refcode">
                 </div>
             </div>
             <div class="inputcontainer">
                 <div class="label">
-                    <label for="contact">Contact</label>
+                    <label for="contact">Contact<p class="compulsory">*</p></label>
                 </div>
                 <div class="input text contact">
-                    <input type="text" name="contact" class="inputtextbox" placeholder="Contact no.">
+                    <input type="text" name="contact" class="inputtextbox" placeholder="Contact no." id="mobilenumber" pattern="\d{10}" title="Please enter a 10-digit number" required>
                 </div>
             </div>
             <div class="inputcontainer">
                 <div class="label">
-                    <label for="userid">User id</label>
+                    <label for="email">Email<p class="compulsory">*</p></label>
                 </div>
-                <div class="input text userid">
-                    <input type="text" name="userid" placeholder="Create a user id" class="inputtextbox">
+                <div class="input text email">
+                    <input type="text" name="email" placeholder="Enter your email" class="inputtextbox" id="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email id" required>
                 </div>
             </div>
             <div class="inputcontainer">
                 <div class="label">
-                    <label for="password">Password</label>
+                    <label for="password">Password<p class="compulsory">*</p></label>
                 </div>
-                <div class="input password password">
-                    <input type="password" name="password" class="inputtextbox">
+                <div class="input password">
+                    <input type="password" name="password" class="inputtextbox" required>
                 </div>
             </div>
             <div class="inputcontainer">
                 <div class="label">
                     <label for="password">Confirm Password</label>
                 </div>
-                <div class="input password password">
-                    <input type="password" name="password" class="inputtextbox">
+                <div class="input password">
+                    <input type="password" name="password" class="inputtextbox" required>
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <label class="checkboxContainer">Is Campus Ambassador?&nbsp;
+                    <input type="checkbox" id="isAmbassador" onclick="toggleKeyTextbox()" required>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="inputcontainer" id="secretkey">
+                <div class="label">
+                    <label for="secretkeyinput">Secret Key<p class="compulsory">*</p></label>
+                </div>
+                <div class="input text">
+                    <input type="text" name="secretkeyinput" placeholder="Enter Secret Key" class="inputtextbox">
                 </div>
             </div>
             <div class="register">
                 <button type="submit" class="regButton">Register!</button>
             </div>
         </form>
+
+        <script>
+            function toggleKeyTextbox() {
+                // Get the checkbox and text box elements
+                var checkbox = document.getElementById("isAmbassador");
+                var keyTextbox = document.getElementById("secretkey");
+
+                // Toggle the display property based on checkbox state
+                keyTextbox.style.visibility = checkbox.checked ? "visible" : "hidden";
+            }
+        </script>
+
     </div>
 </body>
 

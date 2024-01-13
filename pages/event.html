@@ -103,6 +103,7 @@
             padding: 8px;
             margin: 0;
             font-size: 0.9em;
+            margin-left: 10px;
         }
 
         .dropdown {
@@ -145,6 +146,25 @@
             background-color: rgba(0, 0, 0, 0.505);
             border-radius: 1rem;
             margin: 15px;
+            padding-left: 0;
+        }
+        select {
+            max-width: 212px; /* Adjust the value based on your needs */
+            padding: 4px;
+            margin: 0;
+        }
+        .eventslable{
+            margin-bottom: 0;
+            padding: 0;
+        }
+        label{
+            margin-left: 0;
+        }
+        .events{
+            margin: 5px;
+            width: 224px;
+            padding-left: 13px;
+            margin-bottom: 7px;
         }
     </style>
 </head>
@@ -164,11 +184,11 @@
 
         <form action="">
             <div class="inputcontainer">
-                <div class="label">
-                    <label for="year">Event</label>
+                <div class="label eventslable">
+                    <label for="events">Event</label>
                 </div>
-                <div class="input dropdown year">
-                    <select name="year">
+                <div class="input dropdown events">
+                    <select name="events" id="selectEvent">
                         <option value="picture_story">Tasveeron ki Dastan</option>
                         <option value="digital_art">Hunar-e-Tasveer</option>
                         <option value="short_film">Safarnama</option>
@@ -206,10 +226,18 @@
             </div>
             <div class="inputcontainer">
                 <div class="label">
-                    <label for="password">Confirm Password</label>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input text email">
+                    <input type="text" name="email" placeholder="Enter your email" class="inputtextbox" id="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email id" required>
+                </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="password">Password</label>
                 </div>
                 <div class="input password password">
-                    <input type="password" name="password" class="inputtextbox">
+                    <input type="password" name="password" class="inputtextbox" id="password" required>
                 </div>
             </div>
             <div class="register">
