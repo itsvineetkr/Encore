@@ -2,13 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Charm&family=Leckerli+One&family=Open+Sans:wght@300&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 /*
 font-family: 'Ephesis', cursive;
 font-family: 'Charm', cursive;
 font-family: 'Leckerli One', cursive;
 font-family: 'Satisfy', cursive;
+font-family: "Raleway", sans-serif;
+font-family: "Marhey", sans-serif;
 */
+
+:root{
+    --main-font: "Marhey", sans-serif;
+    --main-weight-btn: 500;
+    --main-weight-a: 500;
+}
 * {
     margin: 0;
     padding: 0;
@@ -73,14 +82,15 @@ header {
 header li {
     list-style: none;
     font-size: 1.2rem;
-    font-family: 'Satisfy', cursive;
+    font-family: var(--main-font);
 }
 
 header a {
     text-decoration: none;
     color: #fff;
     font-size: 1.2rem;
-    font-family: 'Satisfy', cursive;
+    font-family: var(--main-font);
+    font-weight: var(--main-weight-a);
     padding: 0.5rem 1rem;
     border: none;
     outline: none;
@@ -120,8 +130,8 @@ header {
 
 .action_btn {
     background-color: rgba(0, 0, 0, 0.536);
-    font-family: 'Satisfy', cursive;
-    color: #fff;
+    font-family: var(--main-font);
+    color: rgb(255, 248, 125);
     padding: 0.5rem 1rem;
     border: none;
     outline: none;
@@ -156,7 +166,7 @@ header {
 }
 
 .dropdown_menu.open {
-    height: 220px;
+    height: 240px;
 }
 
 .dropdown_menu li {
@@ -169,6 +179,7 @@ header {
 .dropdown_menu .action_btn {
     width: 100%;
     display: flex;
+    color: rgb(255, 248, 125);
     justify-content: center;
 }
 
@@ -247,12 +258,13 @@ header {
     padding-left: 0.9rem;
     padding-right: 0.9rem;
     border-radius: 10px;
-    font-family: 'Satisfy', cursive;
-    font-size: 1.5em;
+    font-family: var(--main-font);
+    font-weight: var(--main-weight-btn);
+    font-size: 1.25em;
     border: 20px;
     border-color: black;
     background-color: rgba(0, 0, 0, 0.589);
-    color: rgb(255, 255, 255);
+    color: rgb(255, 248, 125);
     margin: 2vw;
     min-width: 160px;
 }
