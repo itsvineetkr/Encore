@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encore'24</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -70,37 +70,45 @@
     <div class="parallax3" id="events">
         <h2 class="subTitles eventtitle">Events</h2>
 
-        <center>
-            <img src="res/event/1.jpg" class="eventImg">
-            <img src="res/event/2.jpg" class="eventImg">
-            <img src="res/event/3.jpg" class="eventImg">
-            <img src="res/event/4.jpg" class="eventImg">
-            <img src="res/event/5.jpg" class="eventImg">
-            <img src="res/event/6.jpg" class="eventImg">
-            <img src="res/event/7.jpg" class="eventImg">
-            <img src="res/event/8.jpg" class="eventImg">
-            <img src="res/event/9.jpg" class="eventImg">
-            <img src="res/event/10.jpg" class="eventImg">
-            <img src="res/event/11.jpg" class="eventImg">
-            <img src="res/event/12.jpg" class="eventImg">
-            <img src="res/event/13.jpg" class="eventImg">
-            <img src="res/event/14.jpg" class="eventImg">
-            <img src="res/event/15.jpg" class="eventImg">
-            <img src="res/event/16.jpg" class="eventImg">
-            <img src="res/event/17.jpg" class="eventImg">
-            <img src="res/event/18.jpg" class="eventImg">
-            <img src="res/event/19.jpg" class="eventImg">
-            <img src="res/event/20.jpg" class="eventImg">
-            <img src="res/event/21.jpg" class="eventImg">
-            <img src="res/event/22.jpg" class="eventImg">
-            <img src="res/event/23.jpg" class="eventImg">
-            <img src="res/event/24.jpg" class="eventImg">
-            <img src="res/event/25.jpg" class="eventImg">
-            <img src="res/event/26.jpg" class="eventImg">
-            <img src="res/event/27.jpg" class="eventImg">
-            <img src="res/event/28.jpg" class="eventImg">
-            <img src="res/event/29.jpg" class="eventImg">
-        </center>
+        <section class="home" id="home">
+
+            <div class="swiper mySwiper home-slider">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide"><img src="res/event/1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/5.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/6.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/7.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/8.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/9.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/10.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/11.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/12.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/13.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/14.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/15.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/16.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/17.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/18.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/19.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/20.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/21.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/22.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/23.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/24.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/25.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/26.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/27.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/28.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/29.jpg" alt=""></div>
+                    
+                </div>
+            </div>
+    
+        </section>
         <div class="enrollbutton">
             <a href="pages/event.html">Click here to enroll in your favourite events!</a>
         </div>
@@ -144,7 +152,28 @@
             <p>Institute of Engineering and Technology, Lucknow</p>
         </div>
     </footer>
-
+    <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".home-slider", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            loop:true,
+            autoplay:{
+                delay:3000,
+                disableOnInteraction: false,
+            }
+        });
+    </script>
 </body>
 
 </html>

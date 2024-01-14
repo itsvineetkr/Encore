@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Charm&family=Leckerli+One&family=Open+Sans:wght@300&family=Satisfy&display=swap');
+/*
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Ephesis', cursive;
+        font-family: 'Charm', cursive;
+        font-family: 'Leckerli One', cursive;
+        font-family: 'Satisfy', cursive;
+        font-family: 'Bad Script', cursive;
+        */
+
+* {
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    margin: 5px auto;
+    width: 50%;
+}
+
+.left {
+    justify-content: left;
+    padding-left: 10vw;
+}
+
+.right {
+    justify-content: right;
+    padding-right: 10vw;
+}
+
+.right h2 {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 6px black;
+    font-family: 'Satisfy', cursive;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+form {
+    padding: 5vw;
+    margin: 0;
+}
+
+.inputcontainer {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+}
+
+label {
+    display: inline-block;
+    margin: 6px;
+    padding: 2px;
+    width: 20vw;
+    box-sizing: border-box;
+    text-shadow: 2px 2px 6px black;
+    color: white;
+}
+
+.input {
+    display: inline-block;
+    margin: 5px;
+    padding: 2px;
+}
+
+.inputtextbox {
+    border: 0px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 0.125em 0.3125em rgba(black, 0.3);
+    display: flex;
+    justify-content: center;
+    color: black;
+    box-sizing: border-box;
+    padding: 8px;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.dropdown {
+    margin: 10px;
+    width: 206px;
+    color: black;
+}
+
+.dob {
+    margin: 10px;
+    width: 206px;
+}
+
+.isAmbassadorCheckbox {
+    margin: 10px;
+    width: 206px;
+    color: black;
+}
+
+.regButton {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 0px;
+    border-radius: 12px;
+}
+
+.register {
+    width: 60vw+8px;
+    display: flex;
+    justify-content: center;
+    margin: 5vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-image: url(res/bg.jpg);
+    min-height: 100vh;
+    padding-bottom: 15px;
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.505);
+    border-radius: 1rem;
+    margin: 15px;
+    margin-bottom: 0;
+}
+
+.compulsory {
+    display: inline;
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 0.8rem;
+    color: rgb(255, 99, 99);
+}
+
+/*Check Box*/
+.checkboxContainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    width: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.checkboxContainer:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.checkboxContainer input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkboxContainer input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkboxContainer .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#secretkey {
+    visibility: hidden;
+}

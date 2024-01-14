@@ -8,6 +8,12 @@ font-family: 'Charm', cursive;
 font-family: 'Leckerli One', cursive;
 font-family: 'Satisfy', cursive;
 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition-duration: 0.2s linear;
+}
 
 body {
     overflow-x: hidden;
@@ -20,10 +26,8 @@ body {
 .events {
     position: relative;
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .parallax1 {
@@ -47,11 +51,6 @@ body {
     min-height: 20vh;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .container {
     display: flex;
@@ -323,4 +322,33 @@ footer a:hover {
 
 footer a {
     color: white;
+}
+
+.home .content {
+    text-align: center;
+    padding-top: 6rem;
+    margin: 2rem auto;
+    max-width: 70rem;
+}
+
+.home .content h3 {
+    color: #fff;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.home .home-slider .swiper-slide{
+    overflow: hidden;
+    border-radius: .5rem;
+    height: 30rem;
+    width: 21rem;
+}
+
+.home .home-slider .swiper-slide img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.enrollbutton{
+    padding-top: 60px;
 }
