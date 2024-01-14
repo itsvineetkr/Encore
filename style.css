@@ -341,8 +341,10 @@ footer a {
 .home .home-slider .swiper-slide{
     overflow: hidden;
     border-radius: .5rem;
-    height: 30rem;
-    width: 21rem;
+    max-height: 80vh;
+    max-width: 40vw;
+    height: 512px;
+    width: 361px;
 }
 
 .home .home-slider .swiper-slide img{
