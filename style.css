@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Charm&family=Leckerli+One&family=Open+Sans:wght@300&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
 /*
 font-family: 'Ephesis', cursive;
 font-family: 'Charm', cursive;
@@ -52,48 +53,164 @@ body {
     min-height: 20vh;
 }
 
+/*header start*/
 
-.container {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.41);
+header{
+    background-color: #0000006c;
 }
 
-.header-content {
+.logoDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+.logo{
+    max-width: 200px;
+}
+
+header li {
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: 'Satisfy', cursive;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: 'Satisfy', cursive;
+    background-color: rgba(0, 0, 0, 0.425);
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+a:hover {
+    color: orange;
+}
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    height: 110px;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    margin: 5px auto;
+    justify-content: space-between;
 }
 
-.left {
-    justify-content: left;
-    padding-left: 10vw;
-    width: 18%;
+.navbar .links{
+    display: flex;
+    gap: 2rem;
 }
 
-.right {
-    justify-content: right;
-    padding-right: 10vw;
-    width: 80%;
+.navbar .toggle_btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
 }
 
-.right ul a {
-    font-size: 18px;
-    color: rgb(255, 255, 255);
+.action_btn{
+    background-color: rgba(0, 0, 0, 0.536);
     font-family: 'Satisfy', cursive;
-    text-decoration: none;
-    padding: 1vw;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.right ul a:hover {
-    color: #ffee00;
-    transition-duration: 0.2s;
+.action_btn:hover{
+    scale: 1.05;
+    color: #fff;
 }
 
-.logo {
-    max-width: 70px;
-    padding: 5px;
+.action_btn:active{
+    scale: 0.95;
+}
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.021);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 3;
+}
+
+.dropdown_menu.open{
+    height: 220px;
+}
+
+.dropdown_menu li{
+    padding: 5px 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_menu .dd_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff00;
+}
+
+
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .action_btn{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+
+    }
+}
+
+@media (max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+/*header end*/
+
+.titleButtonSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.homepageWrapper {
+    display: block;
 }
 
 .title {
@@ -101,7 +218,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 55vh;
+    height: 20vh;
+    padding-bottom: 10vh;
+
 }
 
 .titleImg {
@@ -113,7 +232,7 @@ body {
     display: flex;
     justify-content: center;
     margin: auto;
-    padding: 122px;
+    padding: 0;
 }
 
 .homepagebuttons {
@@ -125,13 +244,13 @@ body {
     padding-right: 0.9rem;
     border-radius: 10px;
     font-family: 'Satisfy', cursive;
-    font-size: 1.2em;
+    font-size: 1.5em;
     border: 20px;
     border-color: black;
     background-color: rgba(0, 0, 0, 0.589);
     color: rgb(255, 255, 255);
     margin: 2vw;
-    min-width: 135px;
+    min-width: 160px;
 }
 
 .homepagebuttons:hover {
@@ -146,7 +265,7 @@ body {
 }
 
 .countImg {
-    
+
     width: 110vw;
     min-height: 6vh;
     margin: auto;
@@ -154,7 +273,7 @@ body {
     justify-content: center;
 }
 
-.ribbonImg { 
+.ribbonImg {
     width: 120vw;
     min-height: 6vh;
     margin: auto;
@@ -337,7 +456,7 @@ footer a {
     text-transform: uppercase;
 }
 
-.home .home-slider .swiper-slide{
+.home .home-slider .swiper-slide {
     overflow: hidden;
     border-radius: .5rem;
     max-height: 80vh;
@@ -346,11 +465,12 @@ footer a {
     width: 342px;
 }
 
-.home .home-slider .swiper-slide img{
+.home .home-slider .swiper-slide img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.enrollbutton{
+
+.enrollbutton {
     padding-top: 60px;
 }

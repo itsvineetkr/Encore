@@ -103,7 +103,6 @@
             padding: 8px;
             margin: 0;
             font-size: 0.9em;
-            margin-left: 10px;
         }
 
         .dropdown {
@@ -142,29 +141,10 @@
             min-height: 100vh;
         }
 
-        .formContainer {
+        form {
             background-color: rgba(0, 0, 0, 0.505);
             border-radius: 1rem;
             margin: 15px;
-            padding-left: 0;
-        }
-        select {
-            max-width: 212px; /* Adjust the value based on your needs */
-            padding: 4px;
-            margin: 0;
-        }
-        .eventslable{
-            margin-bottom: 0;
-            padding: 0;
-        }
-        label{
-            margin-left: 0;
-        }
-        .events{
-            margin: 5px;
-            width: 224px;
-            padding-left: 13px;
-            margin-bottom: 7px;
         }
     </style>
 </head>
@@ -181,70 +161,61 @@
                 </div>
             </div>
         </header>
-        <div class="formContainer">
-            <form action="">
-                <div class="inputcontainer">
-                    <div class="label eventslable">
-                        <label for="events">Event</label>
-                    </div>
-                    <div class="input dropdown events">
-                        <select name="events" id="selectEvent">
-                            <option value="picture_story">Tasveeron ki Dastan</option>
-                            <option value="digital_art">Hunar-e-Tasveer</option>
-                            <option value="short_film">Safarnama</option>
-                            <option value="reel_making">Reel making</option>
-                            <option value="photography">Darpan</option>
-                            <option value="solo_singing">Sargam</option>
-                            <option value="group_singing">Geet Gharana</option>
-                            <option value="band_war">Swarsangam</option>
-                            <option value="rap_battle">Raftaar</option>
-                            <option value="marketing_mania">Marketing Mania</option>
-                            <option value="brand_wars">Brand Wars</option>
-                            <option value="case_study">Tehkikat</option>
-                            <option value="auction">Maya Bazaar</option>
-                            <option value="essay_writing">Essay Writing</option>
-                            <option value="twist_a_tale">Afsane</option>
-                            <option value="debate">Roobaroo</option>
-                            <option value="model_united_nations">Model United Nations</option>
-                            <option value="just_a_miniut">Jumla</option>
-                            <option value="open_stage">Rangmanch</option>
-                            <option value="live_sketching">Pratimb</option>
-                            <option value="face_painting">Mukhauta</option>
-                            <option value="relay_rangoli">Rangsaaz</option>
-                            <option value="tshirt_painting">T-Shirt Painting</option>
-                            <option value="nukkad">Bawaal</option>
-                            <option value="monoact">Ekanki</option>
-                            <option value="skit">Tamasha</option>
-                            <option value="mime">Hunar-e-Bayan</option>
-                            <option value="mimicry">Kirdaar</option>
-                            <option value="cosplay">Rupantaran</option>
-                            <option value="solo_dance">Natraj</option>
-                            <option value="group_dance">Raqs</option>
-                            <option value="dance_battle">One to One Dance Battle</option>
-                        </select>
-                    </div>
+
+        <form action="">
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="year">Event</label>
                 </div>
-                <div class="inputcontainer">
-                    <div class="label">
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="input text email">
-                        <input type="text" name="email" placeholder="Enter your email" class="inputtextbox" id="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email id" required>
-                    </div>
+                <div class="input dropdown year">
+                    <select name="year">
+                        <option value="picture_story">Tasveeron ki Dastan</option>
+                        <option value="digital_art">Hunar-e-Tasveer</option>
+                        <option value="short_film">Safarnama</option>
+                        <option value="reel_making">Reel making</option>
+                        <option value="photography">Darpan</option>
+                        <option value="solo_singing">Sargam</option>
+                        <option value="group_singing">Geet Gharana</option>
+                        <option value="band_war">Swarsangam</option>
+                        <option value="rap_battle">Raftaar</option>
+                        <option value="marketing_mania">Marketing Mania</option>
+                        <option value="brand_wars">Brand Wars</option>
+                        <option value="case_study">Tehkikat</option>
+                        <option value="auction">Maya Bazaar</option>
+                        <option value="essay_writing">Essay Writing</option>
+                        <option value="twist_a_tale">Afsane</option>
+                        <option value="debate">Roobaroo</option>
+                        <option value="model_united_nations">Model United Nations</option>
+                        <option value="just_a_miniut">Jumla</option>
+                        <option value="open_stage">Rangmanch</option>
+                        <option value="live_sketching">Pratimb</option>
+                        <option value="face_painting">Mukhauta</option>
+                        <option value="relay_rangoli">Rangsaaz</option>
+                        <option value="tshirt_painting">T-Shirt Painting</option>
+                        <option value="nukkad">Bawaal</option>
+                        <option value="monoact">Ekanki</option>
+                        <option value="skit">Tamasha</option>
+                        <option value="mime">Hunar-e-Bayan</option>
+                        <option value="mimicry">Kirdaar</option>
+                        <option value="cosplay">Rupantaran</option>
+                        <option value="solo_dance">Natraj</option>
+                        <option value="group_dance">Raqs</option>
+                        <option value="dance_battle">One to One Dance Battle</option>
+                    </select>
                 </div>
-                <div class="inputcontainer">
-                    <div class="label">
-                        <label for="password">Password</label>
-                    </div>
-                    <div class="input password password">
-                        <input type="password" name="password" class="inputtextbox" id="password" required>
-                    </div>
+            </div>
+            <div class="inputcontainer">
+                <div class="label">
+                    <label for="password">Confirm Password</label>
                 </div>
-                <div class="register">
-                    <button type="submit" class="regButton">Enroll!</button>
+                <div class="input password password">
+                    <input type="password" name="password" class="inputtextbox">
                 </div>
-            </form>
-        </div>
+            </div>
+            <div class="register">
+                <button type="submit" class="regButton">Enroll!</button>
+            </div>
+        </form>
     </div>
 </body>
 
