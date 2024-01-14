@@ -346,8 +346,9 @@ header {
 .enrollbutton a {
     background-color: rgba(0, 0, 0, 0.493);
     text-decoration: none;
-    font-family: 'Satisfy', cursive;
-    font-size: 20px;
+    font-family: var(--main-font);
+    font-weight: var(--main-weight-a);
+    font-size: 17px;
     padding: 10px;
     color: white;
     border-radius: 10px;
