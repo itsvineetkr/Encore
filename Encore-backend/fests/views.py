@@ -40,7 +40,7 @@ def fb_register(request):
     else:
         try:
             user = Reg_User.objects.get(name=data['registration']['name'],email=data['registration']['email'])
-            return HttpResponseRedirect('//www.technex.in')
+            return HttpResponseRedirect('//www.Encore.com')
         except:
             user = Reg_User()
             user.name = data['registration']['name']
@@ -52,7 +52,7 @@ def fb_register(request):
             user.email = data['registration']['email']
             user.fb_ID = data['user_id']
             user.save()
-            return HttpResponseRedirect('//www.technex.in')
+            return HttpResponseRedirect('//www.Encore.com')
 
 
 
@@ -72,7 +72,7 @@ def event-register(request):
 		registration.member_4_details = request.POST['member_4_details']
 		registration.member_5_details = request.POST['member_5_details']
 		registration.save()
-		return HttpResponseRedirect('//www.technex.in/')
+		return HttpResponseRedirect('//www.Encore.com/')
 
 	else:
-		return HttpResponseRedirect('//www.technex.in/')
+		return HttpResponseRedirect('//www.Encore.com/')
