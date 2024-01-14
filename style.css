@@ -55,17 +55,18 @@ body {
 
 /*header start*/
 
-header{
+header {
     background-color: #0000006c;
 }
 
-.logoDiv{
+.logoDiv {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
 }
-.logo{
+
+.logo {
     max-width: 200px;
 }
 
@@ -89,12 +90,13 @@ header a {
 a:hover {
     color: orange;
 }
+
 header {
     position: relative;
     padding: 0 2rem;
 }
 
-.navbar{
+.navbar {
     width: 100%;
     height: 110px;
     max-width: 1200px;
@@ -104,19 +106,19 @@ header {
     justify-content: space-between;
 }
 
-.navbar .links{
+.navbar .links {
     display: flex;
     gap: 2rem;
 }
 
-.navbar .toggle_btn{
+.navbar .toggle_btn {
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
 }
 
-.action_btn{
+.action_btn {
     background-color: rgba(0, 0, 0, 0.536);
     font-family: 'Satisfy', cursive;
     color: #fff;
@@ -129,16 +131,16 @@ header {
     cursor: pointer;
 }
 
-.action_btn:hover{
+.action_btn:hover {
     scale: 1.05;
     color: #fff;
 }
 
-.action_btn:active{
+.action_btn:active {
     scale: 0.95;
 }
 
-.dropdown_menu{
+.dropdown_menu {
     display: none;
     position: absolute;
     right: 2rem;
@@ -153,24 +155,24 @@ header {
     z-index: 3;
 }
 
-.dropdown_menu.open{
+.dropdown_menu.open {
     height: 220px;
 }
 
-.dropdown_menu li{
+.dropdown_menu li {
     padding: 5px 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.dropdown_menu .action_btn{
+.dropdown_menu .action_btn {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.dropdown_menu .dd_btn{
+.dropdown_menu .dd_btn {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -178,27 +180,30 @@ header {
 }
 
 
-@media(max-width: 992px){
+@media(max-width: 992px) {
+
     .navbar .links,
-    .navbar .action_btn{
+    .navbar .action_btn {
         display: none;
     }
 
-    .navbar .toggle_btn{
+    .navbar .toggle_btn {
         display: block;
     }
-    .dropdown_menu{
+
+    .dropdown_menu {
         display: block;
 
     }
 }
 
-@media (max-width: 576px){
-    .dropdown_menu{
+@media (max-width: 576px) {
+    .dropdown_menu {
         left: 2rem;
         width: unset;
     }
 }
+
 /*header end*/
 
 .titleButtonSection {
@@ -352,6 +357,17 @@ header {
     font-size: 70px;
 }
 
+.flashImg {
+    max-width: 120%;
+    max-height: 120vh;
+    padding-bottom: 5rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+
+/* flashback */
+
 .flashback {
     position: relative;
     height: 100%;
@@ -373,6 +389,7 @@ header {
     border-radius: 20px;
     box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.411);
 }
+
 
 footer {
     background: #343434;
