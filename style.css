@@ -69,13 +69,13 @@ body {
 .left {
     justify-content: left;
     padding-left: 10vw;
-    width: 30%;
+    width: 18%;
 }
 
 .right {
     justify-content: right;
     padding-right: 10vw;
-    width: 70%;
+    width: 80%;
 }
 
 .right ul a {
@@ -89,10 +89,6 @@ body {
 .right ul a:hover {
     color: #ffee00;
     transition-duration: 0.2s;
-}
-
-.right ul {
-    padding: 1rem;
 }
 
 .logo {
@@ -117,7 +113,7 @@ body {
     display: flex;
     justify-content: center;
     margin: auto;
-    padding: 100px;
+    padding: 122px;
 }
 
 .homepagebuttons {
@@ -132,9 +128,10 @@ body {
     font-size: 1.2em;
     border: 20px;
     border-color: black;
-    background-color: rgba(0, 0, 0, 0.478);
+    background-color: rgba(0, 0, 0, 0.589);
     color: rgb(255, 255, 255);
-    margin: 1vw;
+    margin: 2vw;
+    min-width: 135px;
 }
 
 .homepagebuttons:hover {
@@ -144,20 +141,22 @@ body {
 
 .count,
 .ribbon {
+    overflow-x: hidden;
     background-color: rgb(0, 0, 0);
 }
 
 .countImg {
-    width: 80vw;
+    
+    width: 110vw;
     min-height: 6vh;
     margin: auto;
     display: flex;
     justify-content: center;
 }
 
-.ribbonImg {
-    width: 96vw;
-    min-height: 3vh;
+.ribbonImg { 
+    width: 120vw;
+    min-height: 6vh;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -343,8 +342,8 @@ footer a {
     border-radius: .5rem;
     max-height: 80vh;
     max-width: 90vw;
-    height: 512px;
-    width: 361px;
+    height: 486px;
+    width: 342px;
 }
 
 .home .home-slider .swiper-slide img{
