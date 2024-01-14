@@ -80,7 +80,6 @@ header a {
     color: #fff;
     font-size: 1.2rem;
     font-family: 'Satisfy', cursive;
-    background-color: rgba(0, 0, 0, 0.425);
     padding: 0.5rem 1rem;
     border: none;
     outline: none;
@@ -353,12 +352,26 @@ header {
     font-size: 70px;
 }
 
-.flashImg {
-    max-width: 120%;
-    max-height: 120vh;
-    padding-bottom: 5rem;
-    padding-right: 3rem;
-    padding-left: 3rem;
+.flashback {
+    position: relative;
+    height: 100%;
+    padding-bottom: 60px;
+}
+
+.flashback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-mySwiper {
+    width: 80vmin;
+    height: 53vmin;
+}
+
+.f-slides{
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.411);
 }
 
 footer {

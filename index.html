@@ -138,9 +138,18 @@
         <div class="flashback">
             <h2 class="subTitles">Flashbacks</h2>
         </div>
-        <div class="flashback">
-            <img src="res/flashback/combine.png" class="flashImg">
-        </div>
+
+        <section class="flashback">
+            <div class="swiper f-mySwiper ">
+                <div class="swiper-wrapper">
+                    <img src="res/flashback/1.jpg" class="swiper-slide f-slides">
+                    <img src="res/flashback/2.jpg" class="swiper-slide f-slides">
+                    <img src="res/flashback/3.jpg" class="swiper-slide f-slides">
+                    <img src="res/flashback/4.jpg" class="swiper-slide f-slides">
+                </div>
+            </div>
+        </section>
+
     </div>
 
 
@@ -198,6 +207,17 @@
                 disableOnInteraction: false,
             }
         });
+
+        var fswiper = new Swiper(".f-mySwiper", {
+            effect: "cards",
+            grabCursor: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            }
+        });
+
     </script>
 </body>
 
