@@ -34,3 +34,10 @@ class EventRegistration(models.model):
 
 	def __str__(self):
 		return '%s - %s' % (self.event,self.team_name)
+
+
+class Ambassador(models.Model):
+    name = models.CharField(max_length=50)
+    university = models.CharField(max_length=100)
+    events_attended = models.PositiveIntegerField()
+
