@@ -12,7 +12,7 @@ class Reg_User(models.Model):
     location = models.CharField(max_length=100)
     college = models.CharField(max_length=100)
     gender = models.CharField(max_length=20, choices=GENDER_CHOICES)
-    fb_ID = models.BigIntegerField()
+    CA_ID = models.BigIntegerField()
 
     def __unicode__(self):
         return self.name
