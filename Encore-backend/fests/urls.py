@@ -4,11 +4,21 @@ from api.apihandler import EventResource, PageResource
 from django.contrib import admin
 from django.views.generic.simple import direct_to_template
 from views import *
+
 admin.autodiscover()
 
 v1_api = Api(api_name='v1')
 v1_api.register(EventResource())
 v1_api.register(PageResource())
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('register/', include('register.urls')),
+    path('login/', include('login.urls')),
+    path('campus_ambassador/', include('campus_ambassador.urls')),
+]
+
 
 urlpatterns = patterns('',
     # Examples:'
@@ -23,4 +33,5 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(v1_api.urls)),
+
 )
