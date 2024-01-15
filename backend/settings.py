@@ -37,7 +37,7 @@ else:
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Yash sir ', '@ietlucknow.ac.in'),
+    ('Yash_sir ', '@ietlucknow.ac.in'),
     ('Aditya ', '@ietlucknow.ac.in'),
     
 )
