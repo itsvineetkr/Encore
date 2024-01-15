@@ -1,0 +1,19 @@
+import torch
+import torch.nn as nn
+
+class BasicLLM(nn.Module):
+    def __init__(self, input_size, output_size):
+        super(BasicLLM, self).__init__()
+        self.linear = nn.Linear(input_size, output_size)
+
+    def forward(self, x):
+        out = self.linear(x)
+        return out
+
+# Example usage
+input_size = 10
+output_size = 5
+model = BasicLLM(input_size, output_size)
+input_data = torch.randn(32, input_size)
+output_data = model(input_data)
+print(output_data.shape)

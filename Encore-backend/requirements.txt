@@ -1,0 +1,10 @@
+Django==
+argparse==
+dj-database-url==
+-e git+https://github.com/j4nu5/django-tastypie.git@63055a7a3c8bf53eac1b879c3bebfd6898416721#egg=django_tastypie-dev
+gunicorn==
+mimeparse==
+psycopg2==
+python-dateutil==
+six==
+wsgiref==
