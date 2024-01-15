@@ -13,8 +13,9 @@ else:
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Vineet kumar', '@ietlucknow.ac.in'),
     ('Aditya kumar', '@ietlucknow.ac.in'),
+    ('Vineet kumar', '@ietlucknow.ac.in'),
+    
 )
 
 MANAGERS = ADMINS
