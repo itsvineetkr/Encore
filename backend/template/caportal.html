@@ -1,0 +1,73 @@
+<!-- FILEPATH: /Users/arawn/Desktop/backend/template/ca.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Ambassador Login</title>
+</head>
+<body>
+    <h1>Campus Ambassador Login</h1>
+    
+    <form action="/login" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <label for="referral">Referral Code:</label>
+        <input type="text" id="referral" name="referral" required><br><br>
+        
+        <input type="submit" value="Login">
+    </form>
+    
+    <script>
+        const referralInput = document.getElementById('referral');
+        const referralForm = document.querySelector('form');
+        
+        referralForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            const referralCode = referralInput.value;
+            
+            // Make an API call to check if the referral code exists in the database
+            fetch('/checkReferralCode', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ referralCode })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.exists) {
+                    // Referral code exists, proceed with login
+                    referralForm.submit();
+                } else {
+                    // Referral code does not exist, show an error message
+                    const errorElement = document.createElement('p');
+                    errorElement.textContent = 'Invalid referral code';
+                    referralForm.appendChild(errorElement);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- for frontend developers -->
+<!--
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Campus Ambassador</h2>
+  <form method="post" action="{% url 'campus_ambassador' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+{% endblock %}
+
+-->
