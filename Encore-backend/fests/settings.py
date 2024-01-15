@@ -175,5 +175,3 @@ LOGGING = {
     }
 }
 
-#Settings for facebook registration
-FACEBOOK_APP_SECRET = '7be92fe7ee2c2d12cd2351d2a2c0dbb8'
