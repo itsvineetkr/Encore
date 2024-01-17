@@ -21,7 +21,6 @@
         body {
             font-family: "Montserrat", sans-serif;
             font-optical-sizing: auto;
-            font-weight: 300;
             margin: 0;
             padding: 0;
             background-image: url(res/bg.jpg);
@@ -31,6 +30,12 @@
             background-size: cover;
             min-height: 100vh;
             background-position: center;
+        }
+        h2{
+            font-weight: 600;
+        }
+        h3{
+            font-weight: 200;
         }
 
         .container {
@@ -65,13 +70,11 @@
         }
 
         .event-title {
-            font-size: 19px;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
         .event-description {
-            font-size: 15px;
             margin-bottom: 15px;
         }
 
@@ -270,9 +273,9 @@
         <div class="event-card">
             <img src="res/event/1.jpg" alt="Event 1 Poster">
             <div class="event-card-content">
-                <div class="event-title">Event 1</div>
-                <div class="event-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="event-title"><h2>Event 1</h2></div>
+                <div class="event-description"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</h3></div>
                 <a href="readmorePages/event1.html" class="read-more">Enroll Now!!</a>
             </div>
         </div>
