@@ -43,7 +43,7 @@ body {
 
 .parallax1 {
     background-image: url("res/background/bg1.jpg");
-    min-height: 100vh;
+/*     min-height: 100vh; */
     background-position: center;
 }
 
